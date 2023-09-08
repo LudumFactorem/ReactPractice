@@ -2,6 +2,7 @@ This is a project for practicing web development.
 
 We intend to use:
 React in TypeScript
+React uses JSX
 Bootstrap
 Webpack
 AWS

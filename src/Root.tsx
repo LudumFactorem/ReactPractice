@@ -7,18 +7,12 @@ import Footer from "./Footer";
 export default function Root() {
   return (
     <div>
-      <div>
-        {/* Topbar for navigation */}
-        <Topbar />
-      </div>
-      <div>
-        {/* Outlet to render the content of the page */}
-        <Outlet />
-      </div>
-      <div>
-        {/* Footer for things like copyright notice */}
-        <Footer />
-      </div>
+      {/* Topbar for navigation */}
+      <Topbar />
+      {/* Outlet to render the content of the page */}
+      <Outlet />
+      {/* Footer for things like copyright notice */}
+      <Footer />
     </div>
   );
 }

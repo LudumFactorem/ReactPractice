@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 // Will include navigation and site title
 export default function Topbar() {
   return (
-    <div>
-      <h1>[Website Name]</h1>
-      <Link to="/">Home</Link>
-      <Link to="/csstest">CSSTest</Link>
-    </div>
+    <nav className="topbar">
+      <Link to="/" className="navigation title">
+        [Website Name]
+      </Link>
+      <Link to="/csstest" className="navigation page">
+        CSSTest
+      </Link>
+    </nav>
   );
 }
