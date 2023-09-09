@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
 
 :root {
-  font-family: 'Fredoka', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Fredoka", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, .75);
+  color: rgba(255, 255, 255, 0.75);
   background-color: #272727;
 
   font-synthesis: none;
@@ -52,7 +51,7 @@ button:hover {
   background-color: #1a1d47;
 }
 
-button:active{
+button:active {
   background-color: #ffffff;
 }
 
@@ -77,23 +76,27 @@ button:focus-visible {
 .topbar {
   display: flex;
   background-color: #1f1f1f;
-  align-items: first baseline;
 }
 
 .navigation:hover {
-  color: rgba(255, 255, 255, .75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .navigation {
-  color: rgba(255, 255, 255, .75);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 400;
   font-size: 1em;
   text-decoration: none;
-  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .page:hover {
   background-color: #3d3d3d;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .title {
@@ -106,12 +109,17 @@ button:focus-visible {
   justify-content: center;
 }
 
+.gallery a {
+  text-decoration: none;
+}
+
 .gallery div {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 512px;
   height: 512px;
+  background-color: #0000002e;
 }
 
 .gallery img {
@@ -120,8 +128,13 @@ button:focus-visible {
   object-fit: contain;
 }
 
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 footer {
   display: flex;
   justify-content: center;
 }
-

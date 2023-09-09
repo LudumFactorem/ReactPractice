@@ -9,7 +9,7 @@ export default function Topbar() {
         [Website Name]
       </Link>
       <Link to="/csstest" className="navigation page">
-        CSSTest
+        <div>CSSTest</div>
       </Link>
       <Link to="/images" className="navigation page">
         Images

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Images() {
   const [image, setImage] = useState(0);
@@ -39,15 +38,21 @@ export default function Images() {
   // The image may need some scripting to properly size it.
   // I would like smaller images to be scaled up to fit the nested <div>
   // and larger images to be scaled down.
+
+  //Additionally, when the <img> is wrapped with the <a>
+  // The image is offset vertically by a couple pixels for some reason...
   return (
-    <div className="gallery">
-      <button onClick={reverseCycleImage}>&lt;</button>
-      <div>
-        <a href={"images/" + images[image]}>
-          <img src={"images/" + images[image]} alt={images[image]} />
-        </a>
+    <div className="images">
+      <h2>Gallery</h2>
+      <div className="gallery">
+        <button onClick={reverseCycleImage}>&lt;</button>
+        <div>
+          <a href={"images/" + images[image]}>
+            <img src={"images/" + images[image]} alt={images[image]} />
+          </a>
+        </div>
+        <button onClick={cycleImage}>&gt;</button>
       </div>
-      <button onClick={cycleImage}>&gt;</button>
     </div>
   );
 }
