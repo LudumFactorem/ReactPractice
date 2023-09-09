@@ -11,6 +11,9 @@ export default function Topbar() {
       <Link to="/csstest" className="navigation page">
         CSSTest
       </Link>
+      <Link to="/images" className="navigation page">
+        Images
+      </Link>
     </nav>
   );
 }

@@ -10,9 +10,11 @@ export default function Root() {
       {/* Topbar for navigation */}
       <Topbar />
       {/* Outlet to render the content of the page */}
-      <Outlet />
-      {/* Footer for things like copyright notice */}
-      <Footer />
+      <div className="content">
+        <Outlet />
+        {/* Footer for things like copyright notice */}
+        <Footer />
+      </div>
     </div>
   );
 }

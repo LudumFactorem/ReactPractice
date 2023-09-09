@@ -101,3 +101,27 @@ button:focus-visible {
   font-size: 2.2em;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  height: 512px;
+}
+
+.gallery img {
+  max-width: 512px;
+  max-height: 512px;
+  object-fit: contain;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
