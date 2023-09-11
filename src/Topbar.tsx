@@ -14,6 +14,9 @@ export default function Topbar() {
       <Link to="/images" className="navigation page">
         Images
       </Link>
+      <Link to="/primes" className="navigation page">
+        Primes
+      </Link>
     </nav>
   );
 }

@@ -6,6 +6,7 @@ import Home from "./Home.tsx";
 import CSSTest from "./CSSTest.tsx";
 import Root from "./Root.tsx";
 import Images from "./Images.tsx";
+import Primes from "./Primes.tsx";
 
 // Set up a browser router so that we don't need to re GET the whole site when navigating.
 // See https://reactrouter.com/en/main for additional information
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         // A page for viewing images from the public images folder.
         path: "images",
         element: <Images />,
+      },
+      {
+        // A page for testing primality.
+        path: "primes",
+        element: <Primes />,
       },
     ],
   },

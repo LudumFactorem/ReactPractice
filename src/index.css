@@ -138,3 +138,21 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.primes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prime-input {
+  border: 0;
+  background-color: transparent;
+  font-family: "Fredoka";
+  font-size: 3em;
+  text-align: center;
+}
+
+.prime-input:focus {
+  outline: none;
+}
