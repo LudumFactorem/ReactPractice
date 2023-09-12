@@ -16,9 +16,14 @@ import { useState } from "react";
 export default function Primes() {
   const [number, setNumber] = useState("");
   const [isPrime, setIsPrime] = useState(false);
+  const [prevPrime, setPrevPrime] = useState("None");
+  const [nextPrime, setNextPrime] = useState("None");
 
   function enforceInteger(newString: string) {
-    if (isNaN(Number(newString))) {
+    // TODO
+    // Temporarily limiting number to less than 1,000,000,000
+    // until I can figure out how to implement promises.
+    if (isNaN(Number(newString)) || Number(newString) > 1000000000) {
       return false;
     } else {
       return true;
@@ -68,6 +73,20 @@ export default function Primes() {
     return true;
   }
 
+  function findNextPrime(num: number) {
+    do {
+      num++;
+    } while (!testPrime(num));
+    return num;
+  }
+
+  function findPrevPrime(num: number) {
+    do {
+      num--;
+    } while (!testPrime(num) && num > 2);
+    return num < 2 ? -1 : num;
+  }
+
   // Function to update information about the user's input number
   function update(newString: string) {
     //Disregard any input that is not a number
@@ -77,22 +96,34 @@ export default function Primes() {
       setNumber(newString);
       //Check if the number is prime
       setIsPrime(testPrime(Number(newString)));
+
+      setPrevPrime(String(findPrevPrime(Number(newString))));
+      setNextPrime(String(findNextPrime(Number(newString))));
     }
   }
 
   return (
     <div className="primes">
       <h2>Primes</h2>
-      <div>
-        <form className="prime-form">
-          <input
-            className="prime-input"
-            type="text"
-            placeholder="Type a number"
-            value={number}
-            onChange={(event) => update(event.target.value)}
-          />
-        </form>
+      <div className="prime-hud">
+        <div className="prime-v left">
+          {Number(prevPrime) === -1 ? "None" : prevPrime}
+        </div>
+        <div className="prime-v mid">
+          <form className="prime-form">
+            <input
+              autoFocus
+              className="prime-input"
+              type="text"
+              placeholder="Type a number"
+              value={number}
+              onChange={(event) => update(event.target.value)}
+            />
+          </form>
+        </div>
+        <div className="prime-v right">
+          {Number(nextPrime) === -1 ? "None" : nextPrime}
+        </div>
       </div>
       <p>is {!isPrime && "not"} prime.</p>
     </div>
