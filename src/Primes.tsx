@@ -114,7 +114,7 @@ export default function Primes() {
         </div>
         <div className="prime box mid">
           <div>
-            <form className="prime form">
+            <div className="prime form">
               <input
                 autoFocus
                 className="prime input"
@@ -123,7 +123,7 @@ export default function Primes() {
                 value={number}
                 onChange={(event) => update(event.target.value)}
               />
-            </form>
+            </div>
           </div>
           <div className="prime caption">is {!isPrime && "not"} prime.</div>
         </div>

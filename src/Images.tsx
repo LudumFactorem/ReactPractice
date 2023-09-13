@@ -42,7 +42,7 @@ export default function Images() {
   //Additionally, when the <img> is wrapped with the <a>
   // The image is offset vertically by a couple pixels for some reason...
   return (
-    <div className="images">
+    <div className="images content">
       <h2>Gallery</h2>
       <div className="gallery">
         <button onClick={reverseCycleImage}>&lt;</button>

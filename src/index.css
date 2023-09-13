@@ -94,13 +94,13 @@ button:focus-visible {
   padding-right: 5px;
 }
 
-.page:hover {
+.navigation.page:hover {
   background-color: #3d3d3d;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
-.title {
+.navigation.title {
   font-weight: 700;
   font-size: 2.2em;
 }
@@ -138,12 +138,6 @@ button:focus-visible {
 footer {
   display: flex;
   justify-content: center;
-}
-
-.prime.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .prime.input {
@@ -224,4 +218,31 @@ footer {
 
 .prime.caption {
   font-size: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-by-side {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.undecorate,
+.undecorate:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
 }

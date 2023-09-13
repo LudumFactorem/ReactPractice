@@ -17,6 +17,7 @@ const router = createBrowserRouter([
     path: "/",
     // This root element contains a top bar, and an outlet for rendering other pages below the top bar
     element: <Root />,
+    errorElement: <Root hasError={true} />,
     children: [
       {
         // This states that this child is the default child to be rendered in root
