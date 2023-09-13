@@ -1,0 +1,99 @@
+.cssdebug.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cssdebug.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(auto, auto);
+  width: 100%;
+  margin: 10px;
+}
+
+.cssdebug.item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex: 1 1 auto;
+}
+
+.center-justified {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Debug */
+/* (D)e(B)ug (O)utline (Color)s */
+.dbob, /* Blue */
+.dboc, /* Cyan */
+.dbog, /* Green */
+.dbok, /* Black */
+.dbom, /* Magenta */
+.dbor, /* Red */
+.dbow, /* White */
+.dboy  /* Yellow */ {
+  outline: 2px;
+  outline-style: solid;
+}
+
+.dbor {
+  outline-color: rgb(255, 0, 0);
+}
+
+.dbog {
+  outline-color: rgb(0, 255, 0);
+}
+
+.dbob {
+  outline-color: rgb(0, 0, 255);
+}
+
+.dboc {
+  outline-color: rgb(0, 255, 255);
+}
+
+.dbom {
+  outline-color: rgb(255, 0, 255);
+}
+
+.dboy {
+  outline-color: rgb(255, 255, 0);
+}
+
+.dbow {
+  outline-color: rgb(255, 255, 255);
+}
+
+.dbok {
+  outline-color: rgb(0, 0, 0);
+}
+
+/* (D)e(B)ug background (C)olors (Color) */
+.dbcb {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+.dbcc {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+.dbcg {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+.dbck {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dbcm {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+.dbcr {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.dbcw {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.dbcy {
+  background-color: rgba(255, 255, 0, 0.5);
+}

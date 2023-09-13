@@ -7,6 +7,7 @@ import CSSTest from "./CSSTest.tsx";
 import Root from "./Root.tsx";
 import Images from "./Images.tsx";
 import Primes from "./Primes.tsx";
+import CSSDebug from "./CSSDebug.tsx";
 
 // Set up a browser router so that we don't need to re GET the whole site when navigating.
 // See https://reactrouter.com/en/main for additional information
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         // A page for testing primality.
         path: "primes",
         element: <Primes />,
+      },
+      {
+        // A page for displaying the debug.css options.
+        path: "cssdebug",
+        element: <CSSDebug />,
       },
     ],
   },

@@ -8,14 +8,17 @@ export default function Topbar() {
       <Link to="/" className="navigation title">
         [Website Name]
       </Link>
-      <Link to="/csstest" className="navigation page">
-        <div>CSSTest</div>
-      </Link>
       <Link to="/images" className="navigation page">
         Images
       </Link>
       <Link to="/primes" className="navigation page">
         Primes
+      </Link>
+      <Link to="/csstest" className="navigation page">
+        <div>CSSTest</div>
+      </Link>
+      <Link to="/cssdebug" className="navigation page">
+        <div>CSSDebug</div>
       </Link>
     </nav>
   );

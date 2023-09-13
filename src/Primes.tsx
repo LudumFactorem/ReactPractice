@@ -6,11 +6,6 @@ import { useState } from "react";
         -Disallow spaces, signs (-,+), decimals, E, etc.
     -Handle the case when there is no input:
         -Hide the "is not prime"
-    -Add buttons which allow the user to
-        -Move to the previous prime
-        -Move to the next prime
-        -Pick a random prime
-    -Calculate and show the next and previous prime
 */
 
 export default function Primes() {
@@ -103,29 +98,47 @@ export default function Primes() {
   }
 
   return (
-    <div className="primes">
+    <div className="prime content">
       <h2>Primes</h2>
-      <div className="prime-hud">
-        <div className="prime-v left">
-          {Number(prevPrime) === -1 ? "None" : prevPrime}
+      <div className="prime hud">
+        <div className="prime box left">
+          <div
+            className="prime selector unselectable"
+            onClick={() => {
+              update(prevPrime);
+            }}
+          >
+            <div>{Number(prevPrime) === -1 ? "None" : prevPrime}</div>
+            <div className="prime caption">Previous</div>
+          </div>
         </div>
-        <div className="prime-v mid">
-          <form className="prime-form">
-            <input
-              autoFocus
-              className="prime-input"
-              type="text"
-              placeholder="Type a number"
-              value={number}
-              onChange={(event) => update(event.target.value)}
-            />
-          </form>
+        <div className="prime box mid">
+          <div>
+            <form className="prime form">
+              <input
+                autoFocus
+                className="prime input"
+                type="text"
+                placeholder="Type a number"
+                value={number}
+                onChange={(event) => update(event.target.value)}
+              />
+            </form>
+          </div>
+          <div className="prime caption">is {!isPrime && "not"} prime.</div>
         </div>
-        <div className="prime-v right">
-          {Number(nextPrime) === -1 ? "None" : nextPrime}
+        <div className="prime box right">
+          <div
+            className="prime selector unselectable"
+            onClick={() => {
+              update(nextPrime);
+            }}
+          >
+            <div>{Number(nextPrime) === -1 ? "None" : nextPrime}</div>
+            <div className="prime caption">Next</div>
+          </div>
         </div>
       </div>
-      <p>is {!isPrime && "not"} prime.</p>
     </div>
   );
 }
