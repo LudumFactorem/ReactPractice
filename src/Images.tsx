@@ -38,9 +38,6 @@ export default function Images() {
   // The image may need some scripting to properly size it.
   // I would like smaller images to be scaled up to fit the nested <div>
   // and larger images to be scaled down.
-
-  //Additionally, when the <img> is wrapped with the <a>
-  // The image is offset vertically by a couple pixels for some reason...
   return (
     <div className="images content">
       <h2>Gallery</h2>

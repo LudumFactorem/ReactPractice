@@ -15,8 +15,9 @@ export default function Home() {
             <div
               style={{
                 width: "25vw",
+                height: "25vw",
                 overflow: "hidden",
-                borderRadius: "75px",
+                borderRadius: "50px",
               }}
             >
               <img src="/images/AdamTran.jpg" style={{ maxWidth: "100%" }} />
@@ -29,8 +30,9 @@ export default function Home() {
             <div
               style={{
                 width: "25vw",
+                height: "25vw",
                 overflow: "hidden",
-                borderRadius: "75px",
+                borderRadius: "50px",
               }}
             >
               <img

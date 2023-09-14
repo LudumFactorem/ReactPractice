@@ -8,6 +8,7 @@ import Root from "./Root.tsx";
 import Images from "./Images.tsx";
 import Primes from "./Primes.tsx";
 import CSSDebug from "./CSSDebug.tsx";
+import ComponentTestPage from "./ComponentTestPage.tsx";
 
 // Set up a browser router so that we don't need to re GET the whole site when navigating.
 // See https://reactrouter.com/en/main for additional information
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         // A page for displaying the debug.css options.
         path: "cssdebug",
         element: <CSSDebug />,
+      },
+      {
+        // A page for testing new React components.
+        path: "componenttest",
+        element: <ComponentTestPage />,
       },
     ],
   },

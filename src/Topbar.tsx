@@ -20,6 +20,9 @@ export default function Topbar() {
       <Link to="/cssdebug" className="navigation page">
         <div>CSSDebug</div>
       </Link>
+      <Link to="/componenttest" className="navigation page">
+        <div>Component Test</div>
+      </Link>
       <Link to="/deliberate404" className="navigation page">
         <div>404</div>
       </Link>
