@@ -26,7 +26,7 @@ export default function Home() {
           <div className="description">Adam Tran</div>
         </div>
         <div className="column">
-          <Link to="/profile/JosephGibson" className="undecorate">
+          <Link to="/profile/joe" className="undecorate">
             <div
               style={{
                 width: "25vw",

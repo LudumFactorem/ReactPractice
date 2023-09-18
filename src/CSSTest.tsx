@@ -15,9 +15,7 @@ export default function CSSTest() {
         <Link to="/">Link &lt;a&gt;</Link>
         <p>Paragraph &lt;p&gt;</p>
         <button>&lt;button&gt;</button>
-        <div>
-          <p>&lt;div&gt;</p>
-        </div>
+        <div>&lt;div&gt;</div>
       </div>
     </div>
   );

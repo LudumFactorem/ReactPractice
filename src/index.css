@@ -276,3 +276,26 @@ img.transparent.debug {
   bottom: 0;
   z-index: 2;
 }
+
+.fill-width {
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  justify-content: left;
+}
+
+.right {
+  display: flex;
+  justify-content: right;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.min-width {
+  width: max-content;
+}

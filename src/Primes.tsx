@@ -2,10 +2,8 @@ import { useState } from "react";
 
 /*
     TODO
-    -More rigersouly enforce integer only inputs
-        -Disallow spaces, signs (-,+), decimals, E, etc.
-    -Handle the case when there is no input:
-        -Hide the "is not prime"
+    -Fix the Input box so that it doesn't move when the "is (not) prime." prompt becomes visible
+      -Maybe convert the whole container to a grid
 */
 
 export default function Primes() {
@@ -14,15 +12,31 @@ export default function Primes() {
   const [prevPrime, setPrevPrime] = useState("None");
   const [nextPrime, setNextPrime] = useState("None");
 
+  function PrimeCaption() {
+    if (number !== "") {
+      return <>is {!isPrime && "not"} prime.</>;
+    } else {
+      return <>&nbsp;</>;
+    }
+  }
+
   function enforceInteger(newString: string) {
     // TODO
     // Temporarily limiting number to less than 1,000,000,000
-    // until I can figure out how to implement promises.
-    if (isNaN(Number(newString)) || Number(newString) > 1000000000) {
+    // until I can figure out how do the calculations in the background.
+    if (newString.length > 10) {
       return false;
-    } else {
-      return true;
     }
+
+    // Reject all strings that contain a character that is not a number.
+    for (let index = 0; index < newString.length; index++) {
+      if (newString[index] < "0" || newString[index] > "9") {
+        return false;
+      }
+    }
+
+    // The string only contained numbers and is therefore an integer (or is empty).
+    return true;
   }
 
   function testPrime(num: number) {
@@ -68,6 +82,7 @@ export default function Primes() {
     return true;
   }
 
+  // Find the next prime after the current number
   function findNextPrime(num: number) {
     do {
       num++;
@@ -75,6 +90,7 @@ export default function Primes() {
     return num;
   }
 
+  // Find the previous prime before the current number
   function findPrevPrime(num: number) {
     do {
       num--;
@@ -125,7 +141,9 @@ export default function Primes() {
               />
             </div>
           </div>
-          <div className="prime caption">is {!isPrime && "not"} prime.</div>
+          <div className="prime caption">
+            <PrimeCaption />
+          </div>
         </div>
         <div className="prime box right">
           <div

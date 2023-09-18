@@ -9,6 +9,7 @@ import Images from "./Images.tsx";
 import Primes from "./Primes.tsx";
 import CSSDebug from "./CSSDebug.tsx";
 import ComponentTestPage from "./ComponentTestPage.tsx";
+import JosephGibson from "./JosephGibson.tsx";
 
 // Set up a browser router so that we don't need to re GET the whole site when navigating.
 // See https://reactrouter.com/en/main for additional information
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
         // A page for testing new React components.
         path: "componenttest",
         element: <ComponentTestPage />,
+      },
+      {
+        // Joe's profile page
+        path: "profile/joe",
+        element: <JosephGibson />,
       },
     ],
   },

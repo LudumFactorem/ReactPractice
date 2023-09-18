@@ -1,4 +1,4 @@
-import MappedImage from "./MappedImage";
+import MouseListener from "./MouseListener";
 
 export default function ComponentTestPage() {
   return (
@@ -6,8 +6,8 @@ export default function ComponentTestPage() {
       <h2>Component Test Page</h2>
       <div className="column">
         This page is used for testing new components.
+        <MouseListener />
       </div>
-      <MappedImage src="images/perl.jpg" />
     </div>
   );
 }
