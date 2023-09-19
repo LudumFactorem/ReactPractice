@@ -18,7 +18,7 @@ export default function Root({ hasError = false }) {
       {/* Topbar for navigation */}
       <Topbar />
       {/* Outlet to render the content of the page */}
-      <div className="content">
+      <div>
         {hasError ? <ErrorPage /> : <Outlet />}
         {/* Footer for things like copyright notice */}
         <Footer />
