@@ -1,10 +1,17 @@
-import { ElementRef, useRef, useState } from "react";
+import { ElementRef, useEffect, useRef, useState } from "react";
 
 export default function PointerPointer() {
   const [rotation, setRotation] = useState(0);
   const ppref = useRef<ElementRef<"img">>(null);
 
-  addEventListener("mousemove", (event) => {
+  useEffect(() => {
+    addEventListener("mousemove", updateRotation);
+    return () => {
+      removeEventListener("mousemove", updateRotation);
+    };
+  });
+
+  function updateRotation(event: MouseEvent) {
     let mouse = { x: event.clientX, y: event.clientY };
 
     let box = ppref.current!.getBoundingClientRect();
@@ -18,9 +25,7 @@ export default function PointerPointer() {
     let rot = Math.atan2(vec.y, vec.x);
 
     setRotation(rot);
-  });
-
-  function requestPointerUpdate() {}
+  }
 
   return (
     <img

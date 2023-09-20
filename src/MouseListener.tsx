@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MouseListener() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
-  addEventListener("mousemove", (event) => {
+  function updateMouse(event: MouseEvent) {
     setMouse({ x: event.clientX, y: event.clientY });
+  }
+
+  useEffect(() => {
+    addEventListener("mousemove", updateMouse);
+    return () => {
+      removeEventListener("mousemove", updateMouse);
+    };
   });
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   src: string;
@@ -13,8 +13,13 @@ export default function PanningBackground({
 }: Props) {
   const [offset, setOffset] = useState(0);
 
-  addEventListener("scroll", () => {
+  function updateOffset() {
     setOffset(window.scrollY);
+  }
+
+  useEffect(() => {
+    addEventListener("scroll", updateOffset);
+    return removeEventListener("scroll", updateOffset);
   });
 
   return (
