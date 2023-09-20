@@ -20,6 +20,8 @@ export default function PointerPointer() {
     setRotation(rot);
   });
 
+  function requestPointerUpdate() {}
+
   return (
     <img
       ref={ppref}

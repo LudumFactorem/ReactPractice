@@ -1,4 +1,5 @@
 import MouseListener from "./MouseListener";
+import PanningBackground from "./PanningBackground";
 import PointerPointer from "./PointerPointer";
 import ScrollListener from "./ScrollListener";
 
@@ -6,6 +7,7 @@ export default function ComponentTestPage() {
   return (
     <>
       <ScrollListener />
+      <PanningBackground src="/images/krabs.jpg" />
       <div className="content">
         <h2>Component Test Page</h2>
         <div className="column">
