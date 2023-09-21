@@ -26,6 +26,9 @@ export default function Topbar() {
       <Link to="/deliberate404" className="navigation page">
         <div>404</div>
       </Link>
+      <Link to="/weather" className="navigation page">
+        <div>Weather</div>
+      </Link>
     </nav>
   );
 }
