@@ -10,6 +10,7 @@ import Primes from "./Primes.tsx";
 import CSSDebug from "./CSSDebug.tsx";
 import ComponentTestPage from "./ComponentTestPage.tsx";
 import JosephGibson from "./JosephGibson.tsx";
+import Weather from "./Weather.tsx"
 
 // Set up a browser router so that we don't need to re GET the whole site when navigating.
 // See https://reactrouter.com/en/main for additional information
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
         // Joe's profile page
         path: "profile/joe",
         element: <JosephGibson />,
+      },
+      {
+        // Weather page to implement fetching APIs.
+        path: "weather",
+        element: <Weather />,
       },
     ],
   },
