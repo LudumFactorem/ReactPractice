@@ -19,7 +19,8 @@ console.log("weather: ", weather)
 export default function Weather() {
     return (
       <>
-        <div className="content background-img" style={{ backgroundImage: `url(${background})` }}>
+        <div
+          className="content" style={{ backgroundImage: `url(${background})`, minHeight: "100vh"}}>
           <h2>This is the current weather!</h2>
           <a>Time Zone: {currWeather.timeZone}</a>
           <a>Time Zone: {currWeather.latitude}</a>

@@ -20,7 +20,7 @@ export default function Home() {
                 borderRadius: "50px",
               }}
             >
-              <img src="/images/AdamTran.jpg" style={{ maxWidth: "100%" }} />
+              <img src="/images/AdamTran.png" style={{ maxWidth: "100%" }} />
             </div>
           </Link>
           <div className="description">Adam Tran</div>
