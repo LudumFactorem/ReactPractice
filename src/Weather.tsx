@@ -1,6 +1,7 @@
 import axios from 'axios'
 import background from '../public/images/nyc.jpeg'
 
+// GET API
 // fetched from https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation_probability,rain,showers,snowfall,uv_index,is_day&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&timezone=America%2FNew_York
 const weather = await axios.get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation_probability,rain,showers,snowfall,uv_index,is_day&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&timezone=America%2FNew_York")
 
@@ -20,7 +21,7 @@ export default function Weather() {
     return (
       <>
         <div
-          className="content" style={{ backgroundImage: `url(${background})`, minHeight: "100vh"}}>
+          className="content" style={{ backgroundImage: `url(${background})`, minHeight: "100vh", backgroundSize: "cover"}}>
           <h2>This is the current weather!</h2>
           <a>Time Zone: {currWeather.timeZone}</a>
           <a>Time Zone: {currWeather.latitude}</a>
