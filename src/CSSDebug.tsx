@@ -27,28 +27,33 @@ export default function CSSDebug() {
           (D)e(B)ug background (C)olors (Color)
         </div>
         {colors.split("").map((value: string, index: number) => {
-          let outline = "dbo" + value;
           let background = "dbc" + value;
 
           return (
-            <>
-              <div
-                className={"cssdebug item " + outline}
-                id={outline}
-                style={{ gridColumn: 1, gridRow: 2 + index }}
-                onMouseEnter={updateExample}
-              >
-                {outline}
-              </div>
-              <div
-                className={"cssdebug item " + background}
-                id={background}
-                style={{ gridColumn: 2, gridRow: 2 + index }}
-                onMouseEnter={updateExample}
-              >
-                {background}
-              </div>
-            </>
+            <div
+              className={"cssdebug item " + background}
+              key={background}
+              id={background}
+              style={{ gridColumn: 2, gridRow: 2 + index }}
+              onMouseEnter={updateExample}
+            >
+              {background}
+            </div>
+          );
+        })}
+        {colors.split("").map((value: string, index: number) => {
+          let outline = "dbo" + value;
+
+          return (
+            <div
+              className={"cssdebug item " + outline}
+              key={outline}
+              id={outline}
+              style={{ gridColumn: 1, gridRow: 2 + index }}
+              onMouseEnter={updateExample}
+            >
+              {outline}
+            </div>
           );
         })}
       </div>

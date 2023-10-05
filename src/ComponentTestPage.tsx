@@ -17,7 +17,7 @@ export default function ComponentTestPage() {
           <div className="fit-width">
             {[...Array(100).keys()].map((value) => {
               return (
-                <div>
+                <div key={value}>
                   This is filler line #{value + 1}. I'm using it to fill some
                   space for the ScrollListener. Blah blah blah, more space
                   needed to be filled.
